@@ -305,8 +305,8 @@ Springer class SVJour!}
 \def\and{\ifhmode\unskip\nobreak\fi\ $\cdot$
 }\noindent\keywordname\enspace\ignorespaces#1\par}}
 %
-\def\subclassname{{\bfseries Mathematics Subject Classification
-(2010)}\enspace}
+\def\subclassname{{\bfseries Mathematics Subject Classification(2000)}\enspace}
+
 \def\subclass#1{\par\addvspace\medskipamount{\rightskip=0pt plus1cm
 \def\and{\ifhmode\unskip\nobreak\fi\ $\cdot$
 }\noindent\subclassname\ignorespaces#1\par}}
@@ -1428,4 +1428,3 @@ to\hsize{\vrule\kern3pt\vbox{\kern3pt
 \flushbottom
 \endinput
 %%
-%% End of file `svjour3.cls'.
