@@ -1,4 +1,53 @@
-\documentclass[a4paper,conference]{IEEEtran}
+%\documentclass[a4paper,conference]{IEEEtran}
+
+%%%%%%%%%%%%%%%%%%%%%%% file template.tex %%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This is a general template file for the LaTeX package SVJour3
+% for Springer journals.          Springer Heidelberg 2010/09/16
+%
+% Copy it to a new file with a new name and use it as the basis
+% for your article. Delete % signs as needed.
+%
+% This template includes a few options for different layouts and
+% content for various journals. Please consult a previous issue of
+% your journal as needed.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% First comes an example EPS file -- just ignore it and
+% proceed on the \documentclass line
+% your LaTeX will extract the file if required
+\begin{filecontents*}{example.eps}
+%!PS-Adobe-3.0 EPSF-3.0
+%%BoundingBox: 19 19 221 221
+%%CreationDate: Mon Sep 29 1997
+%%Creator: programmed by hand (JK)
+%%EndComments
+gsave
+newpath
+  20 20 moveto
+  20 220 lineto
+  220 220 lineto
+  220 20 lineto
+closepath
+2 setlinewidth
+gsave
+  .4 setgray fill
+grestore
+stroke
+grestore
+\end{filecontents*}
+%
+\RequirePackage{fix-cm}
+%
+%\documentclass{svjour3}                     % onecolumn (standard format)
+%\documentclass[smallcondensed]{svjour3}     % onecolumn (ditto)
+\documentclass[twocolumn,smallextended]{svjour3}       % onecolumn (second format)
+%\documentclass[twocolumn]{svjour3}          % twocolumn
+%
+\smartqed  % flush right qed marks, e.g. at end of proof
+%
+
 \usepackage{multirow}
 \usepackage{color}
 \usepackage{dblfloatfix}
@@ -15,19 +64,19 @@
 \hypersetup{pdftitle={Urdu Handwritten Text Recognition},
 colorlinks=true,citecolor=blue,linkcolor=red}
 
-\ifCLASSOPTIONcompsoc
-\usepackage[tight,normalsize,sf,SF]{subfigure}
-\else
-\usepackage[tight,footnotesize]{subfigure}
-\fi
-%%%%--------------------------------------------------------------------------------
-\newcommand{\abs}[1]{\left\vert #1 \right\vert}
-\newcommand{\norm}[1]{\left\Vert#1\right\Vert}
-\newtheorem{definition}{Definition}
-\newtheorem{theorem}{Theorem}
-\newtheorem{lemma}{Lemma}
-\newtheorem{proposition}{Proposition}[section]
-\newtheorem{remark}{Remark}
+%\ifCLASSOPTIONcompsoc
+%\usepackage[tight,normalsize,sf,SF]{subfigure}
+%\else
+%\usepackage[tight,footnotesize]{subfigure}
+%\fi
+%%%%%--------------------------------------------------------------------------------
+%\newcommand{\abs}[1]{\left\vert #1 \right\vert}
+%\newcommand{\norm}[1]{\left\Vert#1\right\Vert}
+%\newtheorem{definition}{Definition}
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{lemma}{Lemma}
+%\newtheorem{proposition}{Proposition}[section]
+%\newtheorem{remark}{Remark}
 
 \newcommand*{\img}[1]{%
     \raisebox{-.02\baselineskip}{%
@@ -53,24 +102,24 @@ colorlinks=true,citecolor=blue,linkcolor=red}
 \newcounter{MYtempeqncnt}    % Required for IEEE double column equations which unfortunately our paper has!!
 
 
-\ifCLASSINFOpdf
-  % \usepackage[pdftex]{graphicx}
-  % declare the path(s) where your graphic files are
-  % \graphicspath{{../pdf/}{../jpeg/}}
-  % and their extensions so you won't have to specify these with
-  % every instance of \includegraphics
-  % \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
-\else
-  % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
-  % will default to the driver specified in the system graphics.cfg if no
-  % driver is specified.
-  % \usepackage[dvips]{graphicx}
-  % declare the path(s) where your graphic files are
-  % \graphicspath{{../eps/}}
-  % and their extensions so you won't have to specify these with
-  % every instance of \includegraphics
-  % \DeclareGraphicsExtensions{.eps}
-\fi
+%\ifCLASSINFOpdf
+%  % \usepackage[pdftex]{graphicx}
+%  % declare the path(s) where your graphic files are
+%  % \graphicspath{{../pdf/}{../jpeg/}}
+%  % and their extensions so you won't have to specify these with
+%  % every instance of \includegraphics
+%  % \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+%\else
+%  % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
+%  % will default to the driver specified in the system graphics.cfg if no
+%  % driver is specified.
+%  % \usepackage[dvips]{graphicx}
+%  % declare the path(s) where your graphic files are
+%  % \graphicspath{{../eps/}}
+%  % and their extensions so you won't have to specify these with
+%  % every instance of \includegraphics
+%  % \DeclareGraphicsExtensions{.eps}
+%\fi
 
 
 
@@ -85,38 +134,53 @@ colorlinks=true,citecolor=blue,linkcolor=red}
 \title{Multi-Aspect Urdu Handwriting Data Collection}
 %\title{A Survey on Urdu Handwritten Text Recognition: Tasks, approaches and applications}
 
-% author names and affiliations
-% use a multiple column layout for up to three different
-% affiliations
-\author{
-    \IEEEauthorblockN{
-		Mujtaba Husnain\IEEEauthorrefmark{1},
-		Malik Muhammad Saad Missen \IEEEauthorrefmark{1},
-		M. Abid Manzoor \IEEEauthorrefmark{1},\\
-		Micka\"{e}l Coustaty\IEEEauthorrefmark{2}, 
-		Muzzamil Luqman\IEEEauthorrefmark{2} and
-		Jean-Marc Ogier\IEEEauthorrefmark{2}}
-		\vspace{0.25cm}
-		
-    \IEEEauthorblockA{
-        \begin{tabular}{cc}
-            \begin{tabular}{@{}c@{}}
-                \IEEEauthorrefmark{1}
-					The Islamia University of Bahawalpur\\
-					, Pakistan\\
-					(mujtaba.husnain,saad.missen)@iub.edu.pk
-            \end{tabular} & \begin{tabular}{@{}c@{}}
-                \IEEEauthorrefmark{2}
-					L3i Lab, University of la Rochelle\\
-					Av. Michel Cr\'epeau, 17000 La Rochelle, France\\
-					(mickael.coustaty, mluqma01, jean-marc.ogier )@univ-lr.fr
-            \end{tabular}
-        \end{tabular}
-    }
+%% author names and affiliations
+%% use a multiple column layout for up to three different
+%% affiliations
+%\author{
+%    \IEEEauthorblockN{
+%		Mujtaba Husnain\IEEEauthorrefmark{1},
+%		Malik Muhammad Saad Missen \IEEEauthorrefmark{1},
+%		M. Abid Manzoor \IEEEauthorrefmark{1},\\
+%		Micka\"{e}l Coustaty\IEEEauthorrefmark{2}, 
+%		Muzzamil Luqman\IEEEauthorrefmark{2} and
+%		Jean-Marc Ogier\IEEEauthorrefmark{2}}
+%		\vspace{0.25cm}
+%		
+%    \IEEEauthorblockA{
+%        \begin{tabular}{cc}
+%            \begin{tabular}{@{}c@{}}
+%                \IEEEauthorrefmark{1}
+%					The Islamia University of Bahawalpur\\
+%					, Pakistan\\
+%					(mujtaba.husnain,saad.missen)@iub.edu.pk
+%            \end{tabular} & \begin{tabular}{@{}c@{}}
+%                \IEEEauthorrefmark{2}
+%					L3i Lab, University of la Rochelle\\
+%					Av. Michel Cr\'epeau, 17000 La Rochelle, France\\
+%					(mickael.coustaty, mluqma01, jean-marc.ogier )@univ-lr.fr
+%            \end{tabular}
+%        \end{tabular}
+%    }
+%}
+\author{Mujtaba Husnain$^1$,
+		Malik Muhammad Saad Missen$^1$,
+		M. Abid Manzoor$^1$,\\ \and 
+		Mickaël Coustaty$^2$ \and 
+		Muhammad Muzzamil Luqman$^2$ \and 
+		Jean-Marc Ogier$^2$
 }
+
+\institute{$^1$The Islamia University of Bahawalpur, Pakistan (mujtaba.husnain,saad.missen)@iub.edu.pk\\
+$^2$ L3i Lab, University of la Rochelle, Av. Michel Cr ́epeau, 17000 La Rochelle, France (mickael.coustaty, mluqma01, jean-marc.ogier )@univ-lr.fr}
+
 
 
 \newcommand{\red}[1]{\textcolor{red}{#1}}
+
+
+\date{Received: date / Accepted: date}
+% The correct dates will be entered by the editor
 
 
 
@@ -129,7 +193,6 @@ Work on the problem of handwritten text recognition in Urdu script has been an a
 \end{abstract}
 
 
-\IEEEpeerreviewmaketitle
 
 \section{Introduction}
 Handwriting recognition is an active area of research in the field of pattern recognition and has various application in industrial and professional applications. Some of these applications include forms processing in government, administrative, health and academic institutes; postal address recognition, processing of bank cheques etc. Handwriting recognition concerns with automatic transforming a source language into its symbolic representation. The source language can be represented either in its spatial (offline) or temporal (online) \cite{61} form in graphical marks. In depth analysis of handwritten text give rise to a number of useful applications such as author profiling, named entity recognition, recognition of overlapped characters etc.\\
@@ -139,7 +202,7 @@ In verbal communication, Urdu language adopted many dialects across the regions 
 Urdu handwriting is used for official assignments and communications in all the organizations in Pakistan. Most of the time, all this data (provided in the form of handwritten applications or forms) is typed into computers for further processing that requires a huge man power, processing equipment, time, money and other resources. For example data entry in NADRA offices for processing requests of National Identity Cards (NIC), student’s applications in government institutes, signature on banker cheques etc require an automatic Urdu handwritten text recognition tool to recognize the text and process the documentation in real time environment. Furthermore, the system should provide facility to save the information in some appropriate database. This will reduce a significant number of resources in daily official matters considering the nature of this task.\\
 The development of Urdu handwritten recognition system can assist in reading historic Urdu manuscripts to make the content of these manuscripts available. The content of manuscripts is written in clear and readable way as compared to handwritten text which makes the task of recognition of contents of manuscript much simpler. On the other hand some issues associated with handwritten text make the task of developing the system for recognition of handwritten text more challenging and complicated. Some of these issues are differences in writing style (even from the same author), image degradation due to cursive nature of the script, poor quality or illegible handwriting etc.\\
 This survey article gives a comprehensive survey of Urdu handwritten text recognition. Most recent survey articles on this topic were published in 2013 \cite{7, 66, 71}. As mentioned above, this survey article focus on the literature related to offline Urdu handwritten text recognition. Furthermore, some recent notable work can be found in \cite{67, 68, 69, 70} for recognition of printed Urdu text.\\
-This paper is organized as follows: A brief introduction of Urdu script is given in~\ref{UrduSC}. In Section~\ref{ICR} we describe basic steps in ICR by describing the usual process of text recognition. Then in Section~\ref{Review}, state-of-the art discussion on the existing work related to Urdu ICR script at different granularity levels is discussed in detail. Open issues, future directions and detailed analysis on the existing work is presented in Section~\ref{disc}. Section~\ref{Con} concludes the review.
+This paper is organized as follows: A brief introduction of Urdu script is given in~\ref{UrduSC}. In Section~\ref{ICR} we describe basic steps in ICR by describing the usual process of text recognition. Then in Section~\ref{sec:Review}, state-of-the art discussion on the existing work related to Urdu ICR script at different granularity levels is discussed in detail. Open issues, future directions and detailed analysis on the existing work is presented in Section~\ref{sec:DataAnalysis}. Section~\ref{Con} concludes the review.
 \section{Urdu Script}\label{UrduSC}
 Urdu is the national language of Pakistan and also considered as one of two official languages of Pakistan \cite{60} (with the other being English). It is widely spoken and understood as a second language by a majority of people of Pakistan \cite{1,2} and also being adopted increasingly as a first language by the people living in urban areas of Pakistan. //
 Urdu script is written from right to left while digits are written from left to right, this is the reason Urdu can be considered as one of the bidirectional languages. Urdu script consists of 38 basic letters shown in Figure~\ref{fig1}. This alphabet set is also considered as superset of all Urdu script-based languages’ alphabets, i.e. Arabic contains 28 and Persian contains 32 \cite{4}. Furthermore, Urdu script also contains some additional alphabets to express the Hindi phonemes. Both Hindi and Urdu languages \cite{4} have same phonology with only difference in written script. All Urdu script-based languages such as Arabic and Persian have some unique characteristics i.e. (i) the script of these languages is written from right to left in cursive style and (ii) the script of these languages is context sensitive i.e. written in the form of ligatures which is a combination of a single or many alphabets. Due to this context sensitivity, most of the alphabets have different shapes depending on their position and their adjoining character in the word \cite{5}. This connectivity of alphabets \cite{6} has enriched the Urdu vocabulary with almost 24,000 ligatures. \\
@@ -181,7 +244,7 @@ In this paper, our contribution revolves around following objectives:
 \end{itemize}
 
 \section{Existing Urdu Data Collections}
-
+\label{sec:Review}
 
 Some Offline Urdu handwritten databases available are CALAM, UPTI, UCOM or UNDH and CENPARMI. Only UNHD is available freely while other data collections access is not free. 
 The concept of creating Urdu handwritten dataset was first conceived in 2013 at computer science department of COMSATS Institute of Information Technology (CIIT) Abbottabad. Firstly, data was collected from 100 students on 6 papers having 8 text lines on each paper. Base lines were removed and text line segmentation was performed on collected data \cite{ahmedsb}. This Urdu dataset was collected at CIIT. With this affiliation we named it as UCOM dataset. UCOM was published in 2015. \\
@@ -191,7 +254,7 @@ Urdu Printed-Text Image (UPTI) is a dataset that was developed for research-comm
 CALAM provides us a way for healing and fetching of information in a scientific and systematic-aspect. This uses design and development of an annotated-corpus of handwritten text-image \cite{ch2015}. This is a suitable mechanism to-annotate linguist handwritten-image dataset. Away from pure text-glossary, CALAM contribute some additional linguistics features-about the nature of language such as-document of corpus to-other language. CALAM-provides us a terrace for linguist Corpus-convenient for all types of linguistic-linked to research, where a large-scale of fine grade systematic-data crosswise language is maintained in both handwritten-and machine-readable format.
 
 %%%%%------- Table 6 --------------------------------------------------------------------------------------
-\begin{table}[t]
+\begin{table*}[t]
 \centering
 \caption{Details of Urdu datasets}\label{tab6}
 \begin{tabular}{@{}lll@{}}
@@ -219,7 +282,7 @@ CALAM \cite{58} & Total number of text lines 3,043  &\\
 & Total number of ligatures 101,181 &\\
 \hline
  \end{tabular}
-\end{table}
+\end{table*}
 %%%%%------- Table 6 --------------------------------------------------------------------------------------
 
 
@@ -351,6 +414,7 @@ Aletheia is a leading system for scientific use and still cost effective. It is 
 
 
 \section{Data Analysis}
+\label{sec:DataAnalysis}
 \subsection{Data Set Details}
 
 Table \ref{tabdataset} describes a summarized review of our data collection in comparison with existing Urdu data collections. The proposed data collection stands unique as far as variety of different styles is concerned contributing significant number of words.  
