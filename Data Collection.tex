@@ -1,4 +1,47 @@
-\documentclass[a4paper,conference]{IEEEtran}
+%%%%%%%%%%%%%%%%%%%%%%% file template.tex %%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This is a general template file for the LaTeX package SVJour3
+% for Springer journals.          Springer Heidelberg 2010/09/16
+%
+% Copy it to a new file with a new name and use it as the basis
+% for your article. Delete % signs as needed.
+%
+% This template includes a few options for different layouts and
+% content for various journals. Please consult a previous issue of
+% your journal as needed.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% First comes an example EPS file -- just ignore it and
+% proceed on the \documentclass line
+% your LaTeX will extract the file if required
+\begin{filecontents*}{example.eps}
+%!PS-Adobe-3.0 EPSF-3.0
+%%BoundingBox: 19 19 221 221
+%%CreationDate: Mon Sep 29 1997
+%%Creator: programmed by hand (JK)
+%%EndComments
+gsave
+newpath
+  20 20 moveto
+  20 220 lineto
+  220 220 lineto
+  220 20 lineto
+closepath
+2 setlinewidth
+gsave
+  .4 setgray fill
+grestore
+stroke
+grestore
+\end{filecontents*}
+%
+\RequirePackage{fix-cm}
+%
+%\documentclass{svjour3}                     % onecolumn (standard format)
+%\documentclass[smallcondensed]{svjour3}     % onecolumn (ditto)
+\documentclass[twocolumn,smallextended]{svjour3}       % onecolumn (second format)
+
 \usepackage{multirow}
 \usepackage{color}
 \usepackage{dblfloatfix}
@@ -468,17 +511,17 @@ Letters	& \multicolumn{3}{c}{\textbf{Used Styles}} \\ \hline
 \hline
 \includegraphics[scale=0.25]{jeeem} series & \includegraphics[scale=0.25]{chay} & \includegraphics[scale=0.20]{jeem}  & \includegraphics[scale=0.15]{jeeem2} \\
 \hline
-\includegraphics[scale=0.25]{daal_orig} series & \includegraphics[scale=0.15]{daal_2} & \includegraphics[scale=0.15]{daal_3}  & \includegraphics[scale=0.15]{daal_4} \\
+\includegraphics[scale=0.25]{daal_orig.png} series & \includegraphics[scale=0.15]{Daal_2.png} & \includegraphics[scale=0.15]{Daal_3.png}  & \includegraphics[scale=0.15]{Daal_4.png} \\
 \hline
-\includegraphics[scale=0.25]{re_orig} series & \includegraphics[scale=0.15]{raay} & \includegraphics[scale=0.15]{raay2}  & \includegraphics[scale=0.15]{re_1} \\
+\includegraphics[scale=0.25]{re_orig.png} series & \includegraphics[scale=0.15]{raay.PNG} & \includegraphics[scale=0.15]{raay2.PNG}  & \includegraphics[scale=0.15]{re_1.png} \\
 \hline
-\includegraphics[scale=0.25]{seen_orig} series & \includegraphics[scale=0.15]{seen} & \includegraphics[scale=0.15]{seen2}  &  \\
+\includegraphics[scale=0.25]{seen_orig.png} series & \includegraphics[scale=0.15]{seen.PNG} & \includegraphics[scale=0.15]{seen2.PNG}  &  \\
 \hline
-\includegraphics[scale=0.20]{suad_orig} series & \includegraphics[scale=0.15]{zuwad2} & \includegraphics[scale=0.15]{suad_4}  &  \\
+\includegraphics[scale=0.20]{suad_orig.png} series & \includegraphics[scale=0.15]{zuwad2.PNG} & \includegraphics[scale=0.15]{Suad_4.png}  &  \\
 \hline
-\includegraphics[scale=0.15]{aien_orig} series & \includegraphics[scale=0.15]{aein} & \includegraphics[scale=0.10]{aein2}  &  \\
+\includegraphics[scale=0.15]{aien_orig.png} series & \includegraphics[scale=0.15]{aein.PNG} & \includegraphics[scale=0.10]{aein2.PNG}  &  \\
 \hline
-\includegraphics[scale=0.15]{tuay_orig} series & \includegraphics[scale=0.15]{tuin} & \includegraphics[scale=0.15]{tuin2}  & \includegraphics[scale=0.15]{zuin} \\
+\includegraphics[scale=0.15]{tuay_orig.png} series & \includegraphics[scale=0.15]{tuin.PNG} & \includegraphics[scale=0.15]{tuin2.PNG}  & \includegraphics[scale=0.15]{zuin.PNG} \\
 \hline
 \includegraphics[scale=0.25]{fay_orig} series & \includegraphics[scale=0.25]{faay} & \includegraphics[scale=0.25]{23}  &  \\
 \hline
@@ -1070,31 +1113,31 @@ Grewal, Parmeet Kaur, and Deepak Prashar. "Behavior prediction through handwriti
 %%% --- figures for Data analysis Comparison for the size of words according to its position in script
 \begin{figure}[h]
 \centering
-	\includegraphics[width=.9\linewidth]{graphs/nahi.png}
+	\includegraphics[width=.9\linewidth]{graphs/nahi.PNG}
 \caption{Graph for word NAHI}\label{fig:sfig11}
 \end{figure}
 
 \begin{figure}[h]
 \centering
-	\includegraphics[width=.9\linewidth]{graphs/dewar.png}
+	\includegraphics[width=.9\linewidth]{graphs/dewar.PNG}
 \caption{Graph for word DEWAR}\label{fig:sfig12}
 \end{figure}
 
 \begin{figure}[h]
 \centering
-	\includegraphics[width=.9\linewidth]{graphs/pakistan.png}
+	\includegraphics[width=.9\linewidth]{graphs/pakistan.PNG}
 \caption{Graph for word PAKISTAN}\label{fig:sfig13}
 \end{figure}
 
 \begin{figure}[h]
 \centering
-	\includegraphics[width=.9\linewidth]{graphs/masjid.png}
+	\includegraphics[width=.9\linewidth]{graphs/masjid.PNG}
 \caption{Graph for word MASJID}\label{fig:sfig14}
 \end{figure}
 
 \begin{figure}[h]
 \centering
-	\includegraphics[width=.9\linewidth]{graphs/station.png}
+	\includegraphics[width=.9\linewidth]{graphs/station.PNG}
 \caption{Graph for word STATION}\label{fig:sfig15}
 \end{figure}
 
@@ -1102,49 +1145,49 @@ Grewal, Parmeet Kaur, and Deepak Prashar. "Behavior prediction through handwriti
 %%% figures for Data Analysis - Comparing Length and Width of Words over Categories
 \begin{figure}[h]
 \centering
-	\includegraphics[width=8.cm]{graphs/clerks.png}
+	\includegraphics[width=8.cm]{graphs/clerks.PNG}
 \caption{Clerks}\label{figclerks}
 \end{figure}
 
 \begin{figure}[h]
 \centering
-	\includegraphics[width=8.cm]{graphs/doctors.png}
+	\includegraphics[width=8.cm]{graphs/doctors.PNG}
 \caption{Doctors}\label{figdoc}
 \end{figure}
 
 \begin{figure}[h]
 \centering
-	\includegraphics[width=8.cm]{graphs/land-officials.png}
+	\includegraphics[width=8.cm]{graphs/land-officials.PNG}
 \caption{Land Officials}\label{figlo}
 \end{figure}
 
 \begin{figure}[h]
 \centering
-	\includegraphics[width=8.cm]{graphs/old-educated.png}
+	\includegraphics[width=8.cm]{graphs/old-educated.PNG}
 \caption{Old Educated}\label{figoed}
 \end{figure}
 
 \begin{figure}[h]
 \centering
-	\includegraphics[width=8.cm]{graphs/special-person.png}
+	\includegraphics[width=8.cm]{graphs/special-person.PNG}
 \caption{Special Persons}\label{figsp}
 \end{figure}
 
 \begin{figure}[h]
 \centering
-	\includegraphics[width=8.cm]{graphs/students.png}
+	\includegraphics[width=8.cm]{graphs/students.PNG}
 \caption{Students}\label{figstd}
 \end{figure}
 
 \begin{figure}[h]
 \centering
-	\includegraphics[width=8.cm]{graphs/stamp-seller.png}
+	\includegraphics[width=8.cm]{graphs/stamp-seller.PNG}
 \caption{Stamp Seller}\label{figstamp}
 \end{figure}
 
 \begin{figure}[h]
 \centering
-	\includegraphics[width=8.cm]{graphs/traveller.png}
+	\includegraphics[width=8.cm]{graphs/traveller.PNG}
 \caption{Traveller}\label{figstrav}
 \end{figure}
 
@@ -1156,7 +1199,7 @@ Grewal, Parmeet Kaur, and Deepak Prashar. "Behavior prediction through handwriti
 
 \begin{figure}[h]
 \centering
-	\includegraphics[width=.9\linewidth]{graphs/width.png}
+	\includegraphics[width=.9\linewidth]{graphs/width.PNG}
 \caption{Graph comparing Width of words for all categories}\label{fig:sfig10}
 \end{figure}
 
@@ -1177,7 +1220,7 @@ Grewal, Parmeet Kaur, and Deepak Prashar. "Behavior prediction through handwriti
 
 \begin{figure}[h]
 \centering
-	\includegraphics[width=8.cm]{figures/fig3_4.png}
+	\includegraphics[width=8.cm]{figures/Fig3_4.png}
 \caption{Matric Level Male Writing Style}\label{fig3_4}
 \end{figure}
 %%%%%------- Figure 2 --------------------------------------------------------------------------------------
@@ -1185,7 +1228,7 @@ Grewal, Parmeet Kaur, and Deepak Prashar. "Behavior prediction through handwriti
 %%%%%------- Figure 3.5 --------------------------------------------------------------------------------------
 \begin{figure}[h]
 \centering
-	\includegraphics[width=8.cm]{figures/fig3_5.png}
+	\includegraphics[width=8.cm]{figures/Fig3_5.png}
 \caption{Matric Level Female Writing Style}\label{fig3_5}
 \end{figure}
 %%%%%------- Figure 2 --------------------------------------------------------------------------------------
@@ -1194,7 +1237,7 @@ Grewal, Parmeet Kaur, and Deepak Prashar. "Behavior prediction through handwriti
 %%%%%------- Figure 3.6 --------------------------------------------------------------------------------------
 \begin{figure}[h]
 \centering
-	\includegraphics[width=8.cm]{figures/fig3_6.png}
+	\includegraphics[width=8.cm]{figures/Fig3_6.png}
 \caption{Graduate Level Male Writing Style}\label{fig3_6}
 \end{figure}
 %%%%%------- Figure 2 --------------------------------------------------------------------------------------
@@ -1202,14 +1245,14 @@ Grewal, Parmeet Kaur, and Deepak Prashar. "Behavior prediction through handwriti
 %%%%%------- Figure 3.7 --------------------------------------------------------------------------------------
 \begin{figure}[h]
 \centering
-	\includegraphics[width=8.cm]{figures/fig3_7.png}
+	\includegraphics[width=8.cm]{figures/Fig3_7.png}
 \caption{Graduate Level Female Writing Style}\label{fig3_7}
 \end{figure}
 %%%%%------- Figure 2 --------------------------------------------------------------------------------------
 
 \begin{figure}[h]
 \centering
-	\includegraphics[width=8.cm]{figures/fig3_8.png}
+	\includegraphics[width=8.cm]{figures/Fig3_8.png}
 \caption{Male Doctor Writing Style}\label{fig3_8}
 \end{figure}
 %%%%%------- Figure 2 --------------------------------------------------------------------------------------
@@ -1217,20 +1260,20 @@ Grewal, Parmeet Kaur, and Deepak Prashar. "Behavior prediction through handwriti
 %%%%%------- Figure 3.9 --------------------------------------------------------------------------------------
 \begin{figure}[h]
 \centering
-	\includegraphics[width=8.cm]{figures/fig3_9.png}
+	\includegraphics[width=8.cm]{figures/Fig3_9.png}
 \caption{Female Doctor Writing Style}\label{fig3_9}
 \end{figure}
 
 \begin{figure}[h]
 \centering
-	\includegraphics[width=8.cm]{figures/fig3_10.png}
+	\includegraphics[width=8.cm]{figures/Fig3_10.png}
 \caption{Male Office Clerk Writing Style}\label{fig3_10}
 \end{figure}
 
 
 \begin{figure}[h]
 \centering
-	\includegraphics[width=8.cm]{figures/fig3_11.png}
+	\includegraphics[width=8.cm]{figures/Fig3_11.png}
 \caption{Female Office Clerk Writing Style}\label{fig3_11}
 \end{figure}
 
@@ -1238,7 +1281,7 @@ Grewal, Parmeet Kaur, and Deepak Prashar. "Behavior prediction through handwriti
 %%%%%------- Figure 3.12 --------------------------------------------------------------------------------------
 \begin{figure}[h]
 \centering
-	\includegraphics[width=8.cm]{figures/fig3_12.png}
+	\includegraphics[width=8.cm]{figures/Fig3_12.png}
 \caption{Land Record Officials Writing Style}\label{fig3_12}
 \end{figure}
 
@@ -1246,7 +1289,7 @@ Grewal, Parmeet Kaur, and Deepak Prashar. "Behavior prediction through handwriti
 %%%%%------- Figure 3.13 --------------------------------------------------------------------------------------
 \begin{figure}[h]
 \centering
-	\includegraphics[width=8.cm]{figures/fig3_13.png}
+	\includegraphics[width=8.cm]{figures/Fig3_13.png}
 \caption{Male Traveler Writing Style}\label{fig3_13}
 \end{figure}
 %%%%%------- Figure 2 --------------------------------------------------------------------------------------
@@ -1254,20 +1297,20 @@ Grewal, Parmeet Kaur, and Deepak Prashar. "Behavior prediction through handwriti
 %%%%%------- Figure 3.14 --------------------------------------------------------------------------------------
 \begin{figure}[h]
 \centering
-	\includegraphics[width=8.cm]{figures/fig3_14.png}
+	\includegraphics[width=8.cm]{figures/Fig3_14.png}
 \caption{Female Traveler Writing Style}\label{fig3_14}
 \end{figure}
 
 \begin{figure}[h]
 \centering
-	\includegraphics[width=8.cm]{figures/fig3_15.png}
+	\includegraphics[width=8.cm]{figures/Fig3_15.png}
 \caption{Stamp Paper Sellers Writing Style}\label{fig3_15}
 \end{figure}
 
 %%%%%------- Figure 3.16 --------------------------------------------------------------------------------------
 \begin{figure}[h]
 \centering
-	\includegraphics[width=8.cm]{figures/fig3_16.png}
+	\includegraphics[width=8.cm]{figures/Fig3_16.png}
 \caption{Old Educated Male Writing Style}\label{fig3_16}
 \end{figure}
 %%%%%------- Figure 2 --------------------------------------------------------------------------------------
@@ -1275,14 +1318,14 @@ Grewal, Parmeet Kaur, and Deepak Prashar. "Behavior prediction through handwriti
 %%%%%------- Figure 3.17 --------------------------------------------------------------------------------------
 \begin{figure}[h]
 \centering
-	\includegraphics[width=8.cm]{figures/fig3_17.png}
+	\includegraphics[width=8.cm]{figures/Fig3_17.png}
 \caption{Old Educated Female Writing Style}\label{fig3_17}
 \end{figure}
 
 %%%%%------- Figure 3.18 --------------------------------------------------------------------------------------
 \begin{figure}[h]
 \centering
-	\includegraphics[width=8.cm]{figures/fig3_18.png}
+	\includegraphics[width=8.cm]{figures/Fig3_18.png}
 \caption{Partially Blind (B3) Writing Style}\label{fig3_18}
 \end{figure}
 %%%%%------- Figure 2 -------------------------------------------------------------------------------------
@@ -1290,7 +1333,7 @@ Grewal, Parmeet Kaur, and Deepak Prashar. "Behavior prediction through handwriti
 %%%%%------- Figure 3.19 --------------------------------------------------------------------------------------
 \begin{figure}[h]
 \centering
-	\includegraphics[width=8.cm]{figures/fig3_19.png}
+	\includegraphics[width=8.cm]{figures/Fig3_19.png}
 \caption{Person Using One Eye (other eye is dead by born) Writing Style}\label{fig3_19}
 \end{figure}
 %%%%%------- Figure 2 -----------
@@ -1298,7 +1341,7 @@ Grewal, Parmeet Kaur, and Deepak Prashar. "Behavior prediction through handwriti
 %%%%%------- Figure 3.20 --------------------------------------------------------------------------------------
 \begin{figure}[h]
 \centering
-	\includegraphics[width=8.cm]{figures/fig3_20.png}
+	\includegraphics[width=8.cm]{figures/Fig3_20.png}
 \caption{Writing Style of person with right hand polio effected}\label{fig3_20}
 \end{figure}
 %%%%%------- Figure 2 -------------------------------------------------------------------------------------
@@ -1307,14 +1350,14 @@ Grewal, Parmeet Kaur, and Deepak Prashar. "Behavior prediction through handwriti
 %%%%%------- Figure 3.21 --------------------------------------------------------------------------------------
 \begin{figure}[h]
 \centering
-	\includegraphics[width=8.cm]{figures/fig3_21.png}
+	\includegraphics[width=8.cm]{figures/Fig3_21.png}
 \caption{Writing style of person with right hand index finger cut}\label{fig3_21}
 \end{figure}
 
 %%%%%------- Figure 3.22 --------------------------------------------------------------------------------------
 \begin{figure}[h]
 \centering
-	\includegraphics[width=8.cm]{figures/fig3_22.png}
+	\includegraphics[width=8.cm]{figures/Fig3_22.png}
 \caption{Right hand writing style of ambidextrous}\label{fig3_22}
 \end{figure}
 %%%%%------- Figure 2 -------------------------------------------------------------------------------------
@@ -1323,7 +1366,7 @@ Grewal, Parmeet Kaur, and Deepak Prashar. "Behavior prediction through handwriti
 %%%%%------- Figure 3.23 --------------------------------------------------------------------------------------
 \begin{figure}[h]
 \centering
-	\includegraphics[width=8.cm]{figures/fig3_23.png}
+	\includegraphics[width=8.cm]{figures/Fig3_23.png}
 \caption{Writing style of same person with left hand}\label{fig3_23}
 \end{figure}
 
